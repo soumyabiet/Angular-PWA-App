@@ -9,7 +9,11 @@
           "/favicon.ico",
           "/index.html",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/*.json"
+        ],
+        "urls" : [
+          "https://fonts.googleapis.com/**"
         ]
       }
     }, {
@@ -20,6 +24,18 @@
         "files": [
           "/assets/**"
         ]
+      }
+    }
+  ],
+  "dataGroups" : [
+    {
+      "name": "data-api",
+      "urls": ["https://www.techiediaries.com/api/data.json"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 20,
+        "maxAge": "1h",
+        "timeout": "10s"
       }
     }
   ]
