@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
   fetchData() {
     this.apiService.fetchData()
         .subscribe((data : Array<Item>) => {
-          console.log( data );
           this.items = data;
         })
   }
